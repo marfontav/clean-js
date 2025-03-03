@@ -1,6 +1,10 @@
 {
     "compilerOptions": {
-        "module": "CommonJS"
+        "module": "CommonJS",
+        "target": "es2020",
+        "lib": ["es2020", "dom"],
+        "moduleResolution": "node"
     },
+    //"include": ["./src/**/*"],
     "exclude": ["node_modules", "**/*.example.js"]
 }
