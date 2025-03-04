@@ -9,6 +9,7 @@ describe('Cadastrar usuario UseCase', function() {
         const usuarioDTO = {
             nome_completo: 'nome_valido',
             CPF: 'CPF_valido',
+            telefone: 'telefone_valido',
             endereco: 'endereco_valido',
             email: 'email_valido'
         };
@@ -19,5 +20,10 @@ describe('Cadastrar usuario UseCase', function() {
         expect(output).toBeUndefined();
         expect(usuariosRepository.cadastrar).toHaveBeenCalledWith(usuarioDTO);
         expect(usuariosRepository.cadastrar).toHaveBeenCalledTimes(1);
+    });
+
+    test('Deve retornar um Throw AppError se o usuarioRepository não for fornecido', function() {
+        
+        expect(() => cadastrarUsuarioUseCase({})).toThrow('usuariosRepository não fornecido');
     });
 });

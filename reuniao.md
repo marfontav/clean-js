@@ -30,4 +30,9 @@
 [] Devolver o livro emprestado
 [] - Caso o usuario tenha atrasado, será gerado uma multa fixa de R$ 5,00
 
-[] Mostrar todos os emprestimos pendentes, com o nome do livro, nome do usuario, data de saída e data de retorno. Ordenado pela data de retorno mais antigo
+[] Mostrar todos os emprestimos pendentes, com o nome do livro, nome do usuario, data de saída e data de retorno. Ordenado pela data de retorno mais antiga
+
+## Estruturas
+
+##UsuariosRepository
+[] cadastrar: ({nome_completo, CPF, telefone, endereco, email}) => Promise<void>
